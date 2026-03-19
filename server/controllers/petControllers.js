@@ -1,7 +1,4 @@
 // TODO: Import the Pet model
-const {
-  deleteTodo,
-} = require('../../../../mod-5/homework/swe-5-4-mvc-rest-api-WilliamJ2006/server/controllers/todoControllers.js');
 const petModel = require(`../models/petModel.js`);
 
 // TODO: Implement each controller function.
