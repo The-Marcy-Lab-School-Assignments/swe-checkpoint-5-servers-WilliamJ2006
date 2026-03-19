@@ -40,7 +40,7 @@ app.patch(`/api/pets/:id`, petController.updatePet);
 app.delete(`/api/pets/:id`, petController.deletePet);
 
 const serve404 = (req, res) => {
-  res.status(404).send(`error: not found ${req.originalUrl}`);
+  res.status(404).send({ error: `not found ${req.originalUrl}` });
 };
 
 app.use(serve404);
