@@ -64,7 +64,6 @@ module.exports.deletePet = (req, res) => {
   const { id } = req.params;
   const deletedPet = petModel.find(Number(id));
   const deleted = petModel.destroy(Number(id));
-  console.log(deletedPet);
   if (!deleted) {
     return res.status(404).send({ message: `ID not found: ${id}` });
   }
