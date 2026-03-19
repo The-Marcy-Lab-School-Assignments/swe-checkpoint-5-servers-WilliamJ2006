@@ -34,7 +34,7 @@ module.exports.list = () => {
 // TODO: Find and return a single pet by its ID.
 module.exports.find = (id) => {
   const pet = pets.find((pet) => pet.id === id);
-  if (!pet) return null;
+  if (!pet) return undefined;
   return { ...pet };
 };
 
