@@ -62,10 +62,9 @@ module.exports.deletePet = (req, res) => {
   // If the pet is not found, send a 404 response
   // Otherwise, send the deleted pet
   const { id } = req.params;
-  const deletedPet = petModel.find(Number(id));
   const deleted = petModel.destroy(Number(id));
   if (!deleted) {
     return res.status(404).send({ message: `ID not found: ${id}` });
   }
-  res.json(deletedPet);
+  res.send(deleted);
 };
